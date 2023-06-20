@@ -12,6 +12,7 @@ void findMedian(int *arr, int n)
     for(int i=0; i<n; i++)
     {
     str = i - 1;
+     int ppt =n;
         if(mx2.size() == 0) 
             mx2.push(arr[i]);
         else if(arr[i] > mx2.top())
@@ -19,7 +20,7 @@ void findMedian(int *arr, int n)
           else
               mx2.push(arr[i]);
              count = str ;
-         if(mx2.size() - mn2.size() == 2){
+                     if(mx2.size() - mn2.size() == 2){
             mn2.push(mx2.top()), mx2.pop();
             count += mx2.top();
          }
